@@ -86,7 +86,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
 body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden;transition:background 0.3s,color 0.3s}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
@@ -381,6 +381,7 @@ footer{background:var(--navy-dark);color:white;padding:60px 0 0}
 .process-steps{grid-template-columns:1fr 1fr}
 .hero-actions{flex-direction:column;align-items:flex-start}
 .btn-primary,.btn-secondary{width:100%;text-align:center;justify-content:center}
+.nav-logo-text{display:none}
 }
 @media(max-width:480px){
 .section{padding:56px 0}
@@ -389,11 +390,8 @@ h1{font-size:2rem}
 .gallery-grid{grid-template-columns:1fr}
 .process-steps{grid-template-columns:1fr}
 .nav-logo img{height:44px!important;max-width:44px!important}
-.brand-title{font-size:0.88rem}
-.brand-sub{font-size:0.56rem;letter-spacing:0.6px}
 }
 @media(max-width:360px){
-.brand-sub{display:none}
 }
 
 /* ======= DARK MODE OVERRIDES ======= */
@@ -552,6 +550,10 @@ a,button,.btn-primary,.btn-secondary,.nav-link,.tab-btn,.course-cta,.dir-cta,.ch
    rangli fon + emoji belgi ko'rinadi (fallback), sayt hech qachon "buzilib"
    qolmaydi. Ziyoratchilar hech qanday rasm yukloay olmaydi. */
 .photo-frame{position:relative;overflow:hidden}
+.photo-frame.is-loading{background:linear-gradient(100deg,var(--gray-200) 30%,var(--gray-100) 50%,var(--gray-200) 70%);background-size:200% 100%;animation:frameShimmer 1.4s ease-in-out infinite}
+.photo-frame.is-loading .frame-img{opacity:0}
+.photo-frame.is-loading::after{content:'Yuklanmoqda...';position:absolute;inset:0;z-index:7;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:600;letter-spacing:0.3px;color:var(--gold-light);background:rgba(6,24,64,0.45)}
+@keyframes frameShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
 .frame-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:5;display:block}
 .photo-frame .emoji-placeholder{position:relative;z-index:1}
 .direction-header.photo-frame::before{content:'';position:absolute;inset:0;z-index:6;background:var(--dir-overlay)}
@@ -819,7 +821,7 @@ a,button,.btn-primary,.btn-secondary,.nav-link,.tab-btn,.course-cta,.dir-cta,.ch
               </div>
             </div>
           </div>
-          <a href="https://ariza.piima.uz/" target="_blank" class="dir-cta" style="border-color:#d4a017;color:#d4a017" data-uz="Tabiiy yo'nalishga ro'yxatdan o'tish →" data-en="Register for Natural Sciences →">Tabiiy yo'nalishga ro'yxatdan o'tish →</a>
+          <a href="https://ariza.piima.uz/" target="_blank" class="dir-cta" style="border-color:#0f4a30;color:#0a3020" data-uz="Tabiiy yo'nalishga ro'yxatdan o'tish →" data-en="Register for Natural Sciences →">Tabiiy yo'nalishga ro'yxatdan o'tish →</a>
         </div>
       </div>
 
@@ -942,7 +944,7 @@ a,button,.btn-primary,.btn-secondary,.nav-link,.tab-btn,.course-cta,.dir-cta,.ch
         <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/8.5.jpg" alt="IELTS 8.5 yuqori ball" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🌍</span></div><div class="card-body"><div class="card-tag" data-uz="1-IMI" data-en="1-SBS">1-IMI</div><h3 data-uz="IELTS 8.5 — Yuqori ball" data-en="IELTS 8.5 — High Score">IELTS 8.5 — Yuqori ball</h3><p data-uz="O'quvchimiz Komila Akramova 15 yoshida IELTS xalqaro sertifikatidan 8.5 ball qo'lga kiritdilar" data-en="Our student Komila Akramova achieved an IELTS international certificate score of 8.5 at the age of 15">O'quvchimiz Komila Akramova 15 yoshida IELTS xalqaro sertifikatidan 8.5 ball qo'lga kiritdilar</p></div></div>
         <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/milliy.jpg" alt="IELTS 8.5 yuqori ball" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🌍</span></div><div class="card-body"><div class="card-tag" data-uz="1-IMI" data-en="1-SBS">1-IMI</div><h3 data-uz="Sinfning barcha o'quvchilari sertifikatga ega" data-en="each student of class has a certificate">Sinfning barcha o'quvchilari sertifikatga ega</h3><p data-uz=" Ta'lim muassasamizning 11-03 sinf, tabiiy fanlar yo'nalishida o'qiyotgan o'quvchilarimizning barchasi umumta'lim fanini bilish darajasi to'g'risidagi sertifikatlarni qo'lga kiritdilar." data-en="All of our students studying in grades 11-03, natural sciences, at our educational institution have received certificates of knowledge of general education subjects."> Ta'lim muassasamizning 11-03 sinf, tabiiy fanlar yo'nalishida o'qiyotgan o'quvchilarimizning barchasi umumta'lim fanini bilish darajasi to'g'risidagi sertifikatlarni qo'lga kiritdilar.</p></div></div>
         <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/elyurt2.jpg" alt="Chet elda grant" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🌍</span></div><div class="card-body"><div class="card-tag" data-uz="1-IMI" data-en="1-SBS">1-IMI</div><h3 data-uz="Chet elda grant" data-en="Grant abroad">Chet el da grant</h3><p data-uz="Ta'lim muassasamizning 11-01 sinf o'quvchisi Qalandarov Ma'murjon 'El-yurt umidi' jamg'armasi stipendiati bo'lib, dunyoning Top 100 talik universitetlariga kiruvchi University of Sheffield talabasi bo'ldilar." data-en="Qalandarov Ma'murjon, a student of grade 11-01 of our educational institution, became a scholarship holder of the "El-yurt umidi" foundation and became a student of the University of Sheffield, one of the Top 100 universities in the world.">Ta'lim muassasamizning 11-01 sinf o'quvchisi Qalandarov Ma'murjon "El-yurt umidi" jamg'armasi stipendiati bo'lib, dunyoning Top 100 talik universitetlariga kiruvchi University of Sheffield talabasi bo'ldilar.</p></div></div>
-        <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/sat1.jpg" alt="SAT Natijasi" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🎓</span></div><div class="card-body"><div class="card-tag" data-uz="Xalqaro" data-en="International">Xalqaro</div><h3 data-uz="SAT Imtihoni - 1590 ball" data-en="SAT Exam - 1590 Score">SAT Imtihoni - 1590 ball</h3><p data-uz="Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi." data-en="Dilshoda Marufjonova, a 10th-grade student at Specialized Boarding School No. 1 in Namangan under the Agency for Specialized Educational Institutions, achieved an outstanding score of 1590 on the international SAT exam.">Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi.</p></div></div>`      
+        <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/sat1.JPG" alt="SAT Natijasi" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🎓</span></div><div class="card-body"><div class="card-tag" data-uz="Xalqaro" data-en="International">Xalqaro</div><h3 data-uz="SAT Imtihoni - 1590 ball" data-en="SAT Exam - 1590 Score">SAT Imtihoni - 1590 ball</h3><p data-uz="Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi." data-en="Dilshoda Marufjonova, a 10th-grade student at Specialized Boarding School No. 1 in Namangan under the Agency for Specialized Educational Institutions, achieved an outstanding score of 1590 on the international SAT exam.">Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi.</p></div></div>`      
       
       
       </div>
@@ -1200,8 +1202,20 @@ function toggleTheme() {
 function handleImgError(img) {
   img.style.display = 'none';
   const frame = img.closest('.photo-frame');
-  if (frame) frame.classList.add('img-missing');
+  if (frame) { frame.classList.add('img-missing'); frame.classList.remove('is-loading'); }
 }
+
+// ====== RASM YUKLANISH INDIKATORI ======
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.frame-img').forEach(function (img) {
+    const frame = img.closest('.photo-frame');
+    if (!frame) return;
+    if (img.complete && img.naturalWidth > 0) return;
+    frame.classList.add('is-loading');
+    img.addEventListener('load', function () { frame.classList.remove('is-loading'); }, { once: true });
+    img.addEventListener('error', function () { frame.classList.remove('is-loading'); }, { once: true });
+  });
+});
 
 // ====== MOBILE MENU ======
 function toggleMenu() {
