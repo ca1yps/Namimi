@@ -132,7 +132,7 @@ p{margin-bottom:0}
 .lang-btn.active{background:var(--white);color:var(--navy);box-shadow:var(--shadow-sm)}
 .theme-btn{width:36px;height:36px;border-radius:8px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:var(--transition);font-size:1.1rem}
 .theme-btn:hover{background:var(--gray-200);color:var(--text)}
-.nav-cta{padding:9px 20px;background:var(--navy);color:var(--white)!important;border-radius:8px;font-size:0.85rem;font-weight:600;transition:var(--transition);white-space:nowrap}
+.nav-cta{padding:9px 20px;background:var(--navy);color:#ffffff!important;border-radius:8px;font-size:0.85rem;font-weight:600;transition:var(--transition);white-space:nowrap}
 .nav-cta:hover{background:var(--navy-light);transform:translateY(-1px);box-shadow:var(--shadow-sm)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
 .nav-hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition)}
@@ -156,13 +156,13 @@ p{margin-bottom:0}
 .hero-content{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(212,160,23,0.2);border:1px solid rgba(212,160,23,0.4);border-radius:100px;color:var(--gold-light);font-size:0.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
 .hero-badge::before{content:'✦';font-size:0.7rem}
-.hero h1{color:var(--white);margin-bottom:20px;line-height:1.15}
+.hero h1{color:#ffffff;margin-bottom:20px;line-height:1.15}
 .hero h1 em{color:var(--gold-light);font-style:italic}
 .hero-desc{color:rgba(255,255,255,0.75);font-size:1.1rem;margin-bottom:36px;max-width:480px;line-height:1.8}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
 .btn-primary{padding:14px 28px;background:var(--gold);color:var(--navy-dark);border-radius:10px;font-weight:700;font-size:0.95rem;transition:var(--transition);display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,160,23,0.4)}
-.btn-secondary{padding:14px 28px;background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.4);border-radius:10px;font-weight:600;font-size:0.95rem;transition:var(--transition)}
+.btn-secondary{padding:14px 28px;background:transparent;color:#ffffff;border:1.5px solid rgba(255,255,255,0.4);border-radius:10px;font-weight:600;font-size:0.95rem;transition:var(--transition)}
 .btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.7);transform:translateY(-2px)}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.1);border-radius:12px;overflow:hidden;max-width:400px}
 .hero-stat{padding:20px;background:rgba(255,255,255,0.05);text-align:center}
@@ -406,8 +406,14 @@ h1{font-size:2rem}
 [data-theme="dark"] .hero-card-float .float-text strong,[data-theme="dark"] .hero-card-float .float-num{color:var(--text)}
 [data-theme="dark"] .about-badge{background:var(--gray-100)}
 [data-theme="dark"] .about-badge strong{color:var(--text)}
-[data-theme="dark"] .step-num{background:var(--gray-100)}
-[data-theme="dark"] .lang-btn.active{background:var(--gray-100)}
+[data-theme="dark"] .step-num{background:var(--gray-100);color:var(--gold-light)}
+[data-theme="dark"] .lang-btn.active{background:var(--gray-100);color:var(--text)}
+[data-theme="dark"] .tab-btn.active{color:var(--text)}
+[data-theme="dark"] .card-tag{background:rgba(240,192,64,0.15);color:var(--gold-light)}
+[data-theme="dark"] .dir-cta{border-color:var(--gold-light);color:var(--gold-light)}
+[data-theme="dark"] .dir-cta:hover{background:var(--gold);color:var(--navy-dark)}
+[data-theme="dark"] .float-num{color:var(--text)}
+[data-theme="dark"] .text-navy{color:var(--gold-light)}
 /* ======= CHALKER BANNER ======= */
 .chalker-banner{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#1a3a8a 100%);border:1px solid rgba(212,160,23,0.3);border-radius:var(--radius-lg);padding:28px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:0;position:relative;overflow:hidden;cursor:pointer;transition:var(--transition);text-decoration:none}
 .chalker-banner:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:rgba(212,160,23,0.6)}
@@ -813,7 +819,7 @@ a,button,.btn-primary,.btn-secondary,.nav-link,.tab-btn,.course-cta,.dir-cta,.ch
               </div>
             </div>
           </div>
-          <a href="https://ariza.piima.uz/" target="_blank" class="dir-cta" style="border-color:#0f4a30;color:#0a3020" data-uz="Tabiiy yo'nalishga ro'yxatdan o'tish →" data-en="Register for Natural Sciences →">Tabiiy yo'nalishga ro'yxatdan o'tish →</a>
+          <a href="https://ariza.piima.uz/" target="_blank" class="dir-cta" style="border-color:#d4a017;color:#d4a017" data-uz="Tabiiy yo'nalishga ro'yxatdan o'tish →" data-en="Register for Natural Sciences →">Tabiiy yo'nalishga ro'yxatdan o'tish →</a>
         </div>
       </div>
 
@@ -936,7 +942,7 @@ a,button,.btn-primary,.btn-secondary,.nav-link,.tab-btn,.course-cta,.dir-cta,.ch
         <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/8.5.jpg" alt="IELTS 8.5 yuqori ball" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🌍</span></div><div class="card-body"><div class="card-tag" data-uz="1-IMI" data-en="1-SBS">1-IMI</div><h3 data-uz="IELTS 8.5 — Yuqori ball" data-en="IELTS 8.5 — High Score">IELTS 8.5 — Yuqori ball</h3><p data-uz="O'quvchimiz Komila Akramova 15 yoshida IELTS xalqaro sertifikatidan 8.5 ball qo'lga kiritdilar" data-en="Our student Komila Akramova achieved an IELTS international certificate score of 8.5 at the age of 15">O'quvchimiz Komila Akramova 15 yoshida IELTS xalqaro sertifikatidan 8.5 ball qo'lga kiritdilar</p></div></div>
         <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/milliy.jpg" alt="IELTS 8.5 yuqori ball" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🌍</span></div><div class="card-body"><div class="card-tag" data-uz="1-IMI" data-en="1-SBS">1-IMI</div><h3 data-uz="Sinfning barcha o'quvchilari sertifikatga ega" data-en="each student of class has a certificate">Sinfning barcha o'quvchilari sertifikatga ega</h3><p data-uz=" Ta'lim muassasamizning 11-03 sinf, tabiiy fanlar yo'nalishida o'qiyotgan o'quvchilarimizning barchasi umumta'lim fanini bilish darajasi to'g'risidagi sertifikatlarni qo'lga kiritdilar." data-en="All of our students studying in grades 11-03, natural sciences, at our educational institution have received certificates of knowledge of general education subjects."> Ta'lim muassasamizning 11-03 sinf, tabiiy fanlar yo'nalishida o'qiyotgan o'quvchilarimizning barchasi umumta'lim fanini bilish darajasi to'g'risidagi sertifikatlarni qo'lga kiritdilar.</p></div></div>
         <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/elyurt2.jpg" alt="Chet elda grant" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🌍</span></div><div class="card-body"><div class="card-tag" data-uz="1-IMI" data-en="1-SBS">1-IMI</div><h3 data-uz="Chet elda grant" data-en="Grant abroad">Chet el da grant</h3><p data-uz="Ta'lim muassasamizning 11-01 sinf o'quvchisi Qalandarov Ma'murjon 'El-yurt umidi' jamg'armasi stipendiati bo'lib, dunyoning Top 100 talik universitetlariga kiruvchi University of Sheffield talabasi bo'ldilar." data-en="Qalandarov Ma'murjon, a student of grade 11-01 of our educational institution, became a scholarship holder of the "El-yurt umidi" foundation and became a student of the University of Sheffield, one of the Top 100 universities in the world.">Ta'lim muassasamizning 11-01 sinf o'quvchisi Qalandarov Ma'murjon "El-yurt umidi" jamg'armasi stipendiati bo'lib, dunyoning Top 100 talik universitetlariga kiruvchi University of Sheffield talabasi bo'ldilar.</p></div></div>
-        <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/sat1.jpg" alt="SAT Natijasi" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🎓</span></div><div class="card-body"><div class="card-tag" data-uz="Xalqaro" data-en="International">Xalqaro</div><h3 data-uz="SAT Imtihoni - 1590 ball" data-en="SAT Exam - 1590 Score">SAT Imtihoni - 1590 ball</h3><p data-uz="Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi." data-en="Dilshoda Marufjonova, a 10th-grade student at Specialized Boarding School No. 1 in Namangan under the Agency for Specialized Educational Institutions, achieved an outstanding score of 1590 on the international SAT exam.">Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi.</p></div></div>`      
+        <div class="card"><div class="card-img photo-frame" style="background:linear-gradient(135deg,#1e8449,#27ae60)"><img class="frame-img" src="images/sat1.JPG" alt="SAT Natijasi" loading="lazy" onerror="handleImgError(this)"><span class="emoji-placeholder">🎓</span></div><div class="card-body"><div class="card-tag" data-uz="Xalqaro" data-en="International">Xalqaro</div><h3 data-uz="SAT Imtihoni - 1590 ball" data-en="SAT Exam - 1590 Score">SAT Imtihoni - 1590 ball</h3><p data-uz="Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi." data-en="Dilshoda Marufjonova, a 10th-grade student at Specialized Boarding School No. 1 in Namangan under the Agency for Specialized Educational Institutions, achieved an outstanding score of 1590 on the international SAT exam.">Ixtisoslashtirilgan ta’lim muassasalari agentligi tizimidagi Namangan shahar 1-son ixtisoslashtirilgan maktab-internatining 10–01-sinf o‘quvchisi Ma’rufjonova Dilshoda xalqaro SAT imtihonida 1590 ball to‘plab, yuksak natijani qo‘lga kiritdi.</p></div></div>`      
       
       
       </div>
@@ -1064,7 +1070,7 @@ a,button,.btn-primary,.btn-secondary,.nav-link,.tab-btn,.course-cta,.dir-cta,.ch
         <div class="map-container" style="height:360px;border-radius:0 0 var(--radius-lg) var(--radius-lg);margin:0">
           <div class="map-placeholder" style="text-align:center;padding:24px">
             <div class="icon" style="font-size:2.5rem;margin-bottom:12px">🗺️</div>
-            <strong style="font-size:1rem;color:var(--navy)">XJVQ+76J</strong>
+            <strong class="text-navy" style="font-size:1rem">XJVQ+76J</strong>
             <p style="font-size:0.85rem;color:var(--text-muted);margin:8px 0 16px" data-uz="Dashtbog' MFY, Namangan" data-en="Dashtbog' MFY, Namangan">Dashtbog' MFY, Namangan</p>
             <a href="https://maps.google.com/?q=XJVQ+76J+Namangan+Uzbekistan" target="_blank" class="btn-primary" style="display:inline-flex;padding:10px 20px;font-size:0.85rem" data-uz="Google Maps da ochish →" data-en="Open in Google Maps →">Google Maps da ochish →</a>
           </div>
